@@ -60,6 +60,11 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *volume_mute[]  = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
+static const char *volume_down[]  = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
+static const char *volume_up[]  = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL };
+static const char *brightness_down[]  = { "xbacklight", "-dec", "5",  NULL };
+static const char *brightness_up[]  = { "xbacklight", "-inc", "5",  NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -89,6 +94,11 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+	{ MODKEY,                       XK_F1,     spawn,          {.v = volume_mute } },
+	{ MODKEY,                       XK_F2,     spawn,          {.v = volume_down } },
+	{ MODKEY,                       XK_F3,     spawn,          {.v = volume_up } },
+	{ MODKEY,                       XK_F11,    spawn,          {.v = brightness_down } },
+	{ MODKEY,                       XK_F12,    spawn,          {.v = brightness_up } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
