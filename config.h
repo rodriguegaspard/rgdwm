@@ -63,8 +63,14 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *volume_mute[]  = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
 static const char *volume_down[]  = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
 static const char *volume_up[]  = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL };
-static const char *brightness_down[]  = { "xbacklight", "-dec", "5",  NULL };
-static const char *brightness_up[]  = { "xbacklight", "-inc", "5",  NULL };
+static const char *brightness_down[]  = { "xbacklight", "-dec", "5", NULL };
+static const char *brightness_up[]  = { "xbacklight", "-inc", "5", NULL };
+static const char *filepicker[]  = { "openfilepicker", NULL };
+static const char *pomodoro[]  = { "pomodoro-start", NULL };
+static const char *playlist[]  = { "playlist", NULL };
+static const char *playlistadd[]  = { "playlist-add", NULL };
+static const char *torrentadd[]  = { "torrent-add", NULL };
+
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -99,6 +105,11 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_F3,     spawn,          {.v = volume_up } },
 	{ MODKEY,                       XK_F11,    spawn,          {.v = brightness_down } },
 	{ MODKEY,                       XK_F12,    spawn,          {.v = brightness_up } },
+	{ MODKEY|ShiftMask,             XK_v,    spawn,            {.v = playlist } },
+	{ MODKEY,                       XK_v,    spawn,            {.v = playlistadd } },
+	{ MODKEY,                       XK_x,    spawn,            {.v = torrentadd } },
+	{ MODKEY,                       XK_w,    spawn,            {.v = pomodoro } },
+	{ MODKEY,                       XK_r,    spawn,            {.v = filepicker } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
