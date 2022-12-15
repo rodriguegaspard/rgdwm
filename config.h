@@ -70,7 +70,7 @@ static const char *pomodoro[]  = { "pomodoro-start", NULL };
 static const char *playlist[]  = { "playlist", NULL };
 static const char *playlistadd[]  = { "playlist-add", NULL };
 static const char *torrentadd[]  = { "torrent-add", NULL };
-
+static const char *screenshot[] = { "scrot", "-s", "-f", "-q", "100", "/home/rosco/pictures/screenshots/screenshot_%Y-%m-%d_%T.png", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -105,11 +105,12 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_F3,     spawn,          {.v = volume_up } },
 	{ MODKEY,                       XK_F11,    spawn,          {.v = brightness_down } },
 	{ MODKEY,                       XK_F12,    spawn,          {.v = brightness_up } },
-	{ MODKEY|ShiftMask,             XK_v,    spawn,            {.v = playlist } },
-	{ MODKEY,                       XK_v,    spawn,            {.v = playlistadd } },
-	{ MODKEY,                       XK_x,    spawn,            {.v = torrentadd } },
-	{ MODKEY,                       XK_w,    spawn,            {.v = pomodoro } },
-	{ MODKEY,                       XK_r,    spawn,            {.v = filepicker } },
+	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = playlist } },
+	{ MODKEY,                       XK_v,      spawn,          {.v = playlistadd } },
+	{ MODKEY,                       XK_x,      spawn,          {.v = torrentadd } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = pomodoro } },
+	{ MODKEY,                       XK_r,      spawn,          {.v = filepicker } },
+	{ 0     ,                       XK_Print,  spawn,          {.v = screenshot } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
