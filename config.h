@@ -71,6 +71,7 @@ static const char *playlist[]  = { "playlist", NULL };
 static const char *playlistadd[]  = { "playlist-add", NULL };
 static const char *torrentadd[]  = { "torrent-add", NULL };
 static const char *screenshot[] = { "scrot", "-s", "-f", "-q", "100", "/home/rosco/pictures/screenshots/screenshot_%Y-%m-%d_%T.png", NULL };
+static const char *xdgwizard[] = {"xdgwizard", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -111,6 +112,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_w,      spawn,          {.v = pomodoro } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = filepicker } },
 	{ 0     ,                       XK_Print,  spawn,          {.v = screenshot } },
+	{ MODKEY     ,                  XK_o,      spawn,          {.v = xdgwizard } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
