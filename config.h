@@ -89,6 +89,7 @@ static const char *torrentadd[]  = { "torrent-add", NULL };
 static const char *screenshot[] = { "scrot", "-s", "-f", "-q", "100", "/home/rosco/pictures/screenshots/screenshot_%Y-%m-%d_%T.png", NULL };
 static const char *clibuddy[] = {"st", "-e", "cli-buddy"};
 static const char *linkhandler[] = {"linkhandler"};
+static const char *screenrecorder[] = {"screenrecorder"};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -129,6 +130,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_w,      spawn,          {.v = pomodoro } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = filepicker } },
 	{ 0     ,                       XK_Print,  spawn,          {.v = screenshot } },
+	{ MODKEY,			XK_Print,  spawn,	   {.v = screenrecorder } },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = clibuddy } },
 	{ MODKEY|ShiftMask, 		XK_l,	   spawn,	   {.v = linkhandler } }, 
 	TAGKEYS(                        XK_1,                      0)
