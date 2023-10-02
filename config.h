@@ -87,9 +87,9 @@ static const char *playlist[]  = { "playlist", NULL };
 static const char *playlistadd[]  = { "playlist-add", NULL };
 static const char *torrentadd[]  = { "torrent-add", NULL };
 static const char *screenshot[] = { "scrot", "-s", "-f", "-q", "100", "/home/rosco/pictures/screenshots/screenshot_%Y-%m-%d_%T.png", NULL };
-static const char *clibuddy[] = {"st", "-e", "cli-buddy"};
-static const char *linkhandler[] = {"linkhandler"};
-static const char *screenrecorder[] = {"screenrecorder"};
+static const char *clibuddy[] = {"st", "-e", "cli-buddy", NULL};
+static const char *linkhandler[] = {"linkhandler", NULL};
+static const char *screenrecorder[] = {"screenrecorder", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
