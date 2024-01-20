@@ -6,8 +6,8 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappx     = 10;        /* gaps between windows */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Iosevka Nerd Font:pixelsize=14:antialias=true:autohint=true", "Noto Color Emoji:pixelsize=14:antialias=true:autohint=true"};
-static const char dmenufont[]       = "Iosevka Nerd Font:pixelsize=14:antialias=true:autohint=true";
+static const char *fonts[]          = { "Iosevka:pixelsize=14:antialias=true:autohint=true", "fontawesome:size=12", "Noto Color Emoji:pixelsize=14:antialias=true:autohint=true"};
+static const char dmenufont[]       = "Iosevka:pixelsize=14:antialias=true:autohint=true";
 //static const char col_gray1[]       = "#003366";
 //static const char col_gray2[]       = "#708090";
 //static const char col_gray3[]       = "#f0f8ff";
