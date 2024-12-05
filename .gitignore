@@ -3,3 +3,6 @@
 
 # Executable
 dwm
+
+# CCLS cache
+.ccls-cache
