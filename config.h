@@ -89,6 +89,7 @@ static const char *screenshot[] = { "scrot", "-s", "-f", "-q", "100", "/home/ros
 static const char *clibuddy[] = {"st", "-e", "cli-buddy", NULL};
 static const char *linkhandler[] = {"linkhandler", NULL};
 static const char *screenrecorder[] = {"screenrecorder", NULL};
+static const char *kao[] = {"kao", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -128,9 +129,10 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_w,      spawn,          {.v = pomodoro } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = filepicker } },
 	{ 0     ,                       XK_Print,  spawn,          {.v = screenshot } },
-	{ MODKEY,			XK_Print,  spawn,	   {.v = screenrecorder } },
+	{ MODKEY,			                  XK_Print,  spawn,	         {.v = screenrecorder } },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = clibuddy } },
-	{ MODKEY|ShiftMask, 		XK_l,	   spawn,	   {.v = linkhandler } }, 
+	{ MODKEY|ShiftMask, 		        XK_l,	    spawn,	         {.v = linkhandler } }, 
+	{ MODKEY|ShiftMask, 		        XK_k,	    spawn,	         {.v = kao } }, 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
