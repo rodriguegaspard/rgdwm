@@ -5,4 +5,4 @@
 dwm
 
 # CCLS cache
-.ccls-cache
+.ccls-cache/*
