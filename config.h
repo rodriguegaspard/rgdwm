@@ -82,14 +82,10 @@ static const char *volup[]  = { "volumecontrol", "-i", NULL };
 static const char *brightness_down[]  = { "xbacklight", "-dec", "5", NULL };
 static const char *brightness_up[]  = { "xbacklight", "-inc", "5", NULL };
 static const char *filepicker[]  = { "openfilepicker", NULL };
-static const char *pomodoro[]  = { "pomodoro-start", NULL };
-static const char *playlist[]  = { "playlist", NULL };
-static const char *playlistadd[]  = { "playlist-add", NULL };
 static const char *screenshot[] = { "snapshot", "-s", NULL };
 static const char *videocapture[] = {"snapshot", "-v", NULL};
 static const char *clibuddy[] = {"st", "-e", "cli-buddy", NULL};
-static const char *linkhandler[] = {"linkhandler", NULL};
-static const char *kao[] = {"kao", NULL};
+static const char *omniclip_general[] = {"omniclip", "-g", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -124,15 +120,11 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_F3,     spawn,          {.v = volup } },
 	{ MODKEY,                       XK_F11,    spawn,          {.v = brightness_down } },
 	{ MODKEY,                       XK_F12,    spawn,          {.v = brightness_up } },
-	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = playlist } },
-	{ MODKEY,                       XK_v,      spawn,          {.v = playlistadd } },
-	{ MODKEY,                       XK_w,      spawn,          {.v = pomodoro } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = filepicker } },
 	{ 0     ,                       XK_Print,  spawn,          {.v = screenshot } },
 	{ MODKEY,			                  XK_Print,  spawn,	         {.v = videocapture } },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = clibuddy } },
-	{ MODKEY|ShiftMask, 		        XK_l,	    spawn,	         {.v = linkhandler } }, 
-	{ MODKEY|ShiftMask, 		        XK_k,	    spawn,	         {.v = kao } }, 
+	{ MODKEY|ShiftMask,             XK_o,      spawn,          {.v = omniclip_general } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
