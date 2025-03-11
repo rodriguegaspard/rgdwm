@@ -86,6 +86,7 @@ static const char *screenshot[] = { "snapshot", "-s", NULL };
 static const char *videocapture[] = {"snapshot", "-v", NULL};
 static const char *clibuddy[] = {"st", "-e", "cli-buddy", NULL};
 static const char *omniclip_general[] = {"omniclip", "-g", NULL};
+static const char *omniclip_browse[] = {"omniclip", "-b", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -124,7 +125,8 @@ static const Key keys[] = {
 	{ 0     ,                       XK_Print,  spawn,          {.v = screenshot } },
 	{ MODKEY,			                  XK_Print,  spawn,	         {.v = videocapture } },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = clibuddy } },
-	{ MODKEY|ShiftMask,             XK_o,      spawn,          {.v = omniclip_general } },
+	{ MODKEY,                       XK_o,      spawn,          {.v = omniclip_general } },
+	{ MODKEY|ShiftMask,             XK_o,      spawn,          {.v = omniclip_browse } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
