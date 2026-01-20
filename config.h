@@ -7,8 +7,12 @@ static const int startwithgaps	    = 1;	 /* 1 means gaps are used by default */
 static const unsigned int gappx     = 10;        /* gaps between windows */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Iosevka Nerd Font:pixelsize=16:antialias=true:autohint=true", "Noto Color Emoji:pixelsize=16:antialias=true:autohint=true"};
-static const char dmenufont[]       = "Iosevka Nerd Font:pixelsize=16:antialias=true:autohint=true";
+static const char *fonts[] = { 
+    "Iosevka Nerd Font:style=Medium:pixelsize=16", 
+    "Sarasa Gothic J:style=Medium:pixelsize=16",
+    "Noto Color Emoji:pixelsize=14",
+};
+static const char dmenufont[] = "Iosevka Nerd Font:style=Medium:pixelsize=16";
 
 // Blue theme colors
 static const char col_fg_norm[]		    = "#b0e0e6"; // Powder Blue
@@ -28,11 +32,11 @@ static const char *colors[][3]      = {
 static const unsigned int alphas[][3]      = {
     /*               fg      bg        border*/
     [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
-	[SchemeSel]  = { OPAQUE, 200, 200 },
+	  [SchemeSel]  = { OPAQUE, 200, 200 },
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "󰎕", "", "", "", "" };
+static const char *tags[] = { "書", "記", "網", "話", "聞", "郵", "楽", "映", "遊" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -41,7 +45,6 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
@@ -53,9 +56,9 @@ static const int refreshrate = 120;  /* refresh rate (per second) for client mov
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "",      tile },    /* first entry is default */
-	{ "",      NULL },    /* no layout function means floating behavior */
-	{ "",      monocle },
+	{ "並",      tile },    /* first entry is default */
+	{ "浮",      NULL },    /* no layout function means floating behavior */
+	{ "独",      monocle },
 };
 
 /* key definitions */
