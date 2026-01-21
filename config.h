@@ -86,6 +86,8 @@ static const char *screenshot[] = { "snapshot", "-s", NULL };
 static const char *videocapture[] = {"snapshot", "-v", NULL};
 static const char *omniclip_general[] = {"omniclip", "-g", NULL};
 static const char *omniclip_browse[] = {"omniclip", "-b", NULL};
+static const char *omniclip_french_lowercase[] = {"omniclip", "-q", "french.txt", "lowercase", NULL};
+static const char *omniclip_french_uppercase[] = {"omniclip", "-q", "french.txt", "uppercase", NULL};
 static const char *vpn_toggle[] = {"vpn", "-t", NULL};
 
 static const Key keys[] = {
@@ -102,9 +104,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_z,      zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_c,      killclient,     {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|ShiftMask,             XK_1,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY|ShiftMask,             XK_2,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY|ShiftMask,             XK_3,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
@@ -127,6 +129,8 @@ static const Key keys[] = {
 	{ MODKEY,			                  XK_Print,  spawn,	         {.v = videocapture } },
 	{ MODKEY,                       XK_o,      spawn,          {.v = omniclip_general } },
 	{ MODKEY|ShiftMask,             XK_o,      spawn,          {.v = omniclip_browse } },
+  { MODKEY,                       XK_f,      spawn,          {.v = omniclip_french_lowercase } },
+	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = omniclip_french_uppercase } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = vpn_toggle } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
