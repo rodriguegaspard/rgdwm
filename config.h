@@ -89,6 +89,7 @@ static const char *omniclip_browse[] = {"omniclip", "-b", NULL};
 static const char *omniclip_french_lowercase[] = {"omniclip", "-q", "french.txt", "lowercase", NULL};
 static const char *omniclip_french_uppercase[] = {"omniclip", "-q", "french.txt", "uppercase", NULL};
 static const char *vpn_toggle[] = {"vpn", "-t", NULL};
+static const char *remote_mpv_toggle[] = {"remote_mpv_toggle", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -129,6 +130,7 @@ static const Key keys[] = {
   { MODKEY,                       XK_f,      spawn,          {.v = omniclip_french_lowercase } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = omniclip_french_uppercase } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = vpn_toggle } },
+	{ MODKEY,                       XK_m,      spawn,          {.v = remote_mpv_toggle } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
